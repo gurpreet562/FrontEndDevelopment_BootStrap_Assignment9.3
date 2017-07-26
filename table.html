@@ -1,0 +1,62 @@
+<html> 
+<head> 
+<title>Adding Form Data to Table</title> 
+<meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script type="text/javascript"> 
+     
+ 
+    function updateForm() { 
+        var firstname = document.getElementById("enterFirstName").value; 
+ 
+        var lastname = document.getElementById("enterLastName").value; 
+         
+        var table=document.getElementById("results"); 
+        var row=table.insertRow(-1); 
+        var cell1=row.insertCell(0); 
+        var cell2=row.insertCell(1); 
+        var cell3=row.insertCell(2); 
+        cell1.innerHTML=firstname; 
+        cell2.innerHTML=lastname;         
+                  
+    } 
+ 
+</script> 
+<style> 
+#element{ 
+padding:20px; 
+} 
+</style> 
+</head> 
+<body> 
+<div class="container" id="element"> 
+<form> 
+    
+                <label for="firstname">FirstName:</label> 
+               <input id="enterFirstName" placeholder="Enter Your First Name" /><br> 
+            
+                <label for="lastname">LastName:</label> 
+             <input id="enterLastName" placeholder="Enter Your Last Name" /><br> 
+           
+     
+             <button type="button" onClick="updateForm();"/>Add To Table</button> 
+ 
+</form> 
+</div> 
+<br> 
+<div class="container"> 
+<table id="results"  class="table"> 
+    <thead> 
+    <tr> 
+        <th >FirstName</th> 
+        <th >LastName</th> 
+         
+    </tr> 
+    </thead> 
+</table> 
+</div> 
+</body></html> 
+ 
